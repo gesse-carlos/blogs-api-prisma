@@ -1,5 +1,5 @@
-import { Prisma, PrismaClient } from '@prisma/client';
-import { sign, verify } from '../../utils/jwt';
+import { PrismaClient } from '@prisma/client';
+import { sign } from '../../utils/jwt';
 import { IUser } from '../../utils/types';
 
 const prisma = new PrismaClient();
