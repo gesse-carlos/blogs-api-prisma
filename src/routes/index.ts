@@ -1,4 +1,4 @@
-export * as userRouter from './user';
-export * as categoryRouter from './category';
-export * as postRouter from './post';
-export * as loginRouter from './login';
+export { default as User } from './user';
+export { default as Category } from './category';
+export { default as Post } from './post';
+export { default as Login } from './login';
