@@ -4,3 +4,9 @@ export interface IUser {
   password: string,
   image: string,
 }
+
+export interface IPost {
+  title: string,
+  content: string,
+  authorId: number,
+}
