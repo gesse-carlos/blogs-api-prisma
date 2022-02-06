@@ -1,7 +1,7 @@
 {
   "name": "blogs-api-prisma",
   "version": "1.0.0",
-  "description": "",
+  "description": "crud api with prisma and typescript",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node index.ts"
