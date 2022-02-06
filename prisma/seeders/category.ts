@@ -4,10 +4,10 @@ const prisma = new PrismaClient();
 
 const data = [
   {
-    name: 'Horror',
+    name: 'Sports',
   },
   {
-    name: 'Action'
+    name: 'Race'
   },
 ]
 
