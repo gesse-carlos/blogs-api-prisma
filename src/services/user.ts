@@ -16,7 +16,7 @@ export const add = async (userData: IUser) => {
     },
   });
 
-  const token = sign(email);
+  const token = sign({ email });
 
   return token;
 };
@@ -27,4 +27,4 @@ export const getById = async (id: string) => prisma.user.findUnique({ where: { i
 
 export const getByEmail = async (email: string) => prisma.user.findUnique({ where: { email } });
 
-export const remove = async (id: string) => prisma.user.delete({ where: { id: +id } });
+export const remove = async (id: number) => prisma.user.delete({ where: { id } });

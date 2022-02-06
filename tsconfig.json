@@ -1,6 +1,10 @@
 {
   "extends": "@tsconfig/node16/tsconfig.json",
   "include": ["src/**/*"],
+  "typeRoots": [
+    "src/@types",
+    "./node_modules/@types",
+  ],
   "compilerOptions": {
     "sourceMap": true,
     "rootDir": "./",

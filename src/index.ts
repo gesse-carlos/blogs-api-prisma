@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 app.use(bodyParser.json());
 
-app.use('/user', User);
+app.use('/users', User);
 app.use('/login', Login);
 app.use('/category', Category);
 app.use('/post', Post);

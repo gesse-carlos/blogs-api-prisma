@@ -12,7 +12,7 @@ export interface IPost {
 }
 
 export type User = {
-  id: string,
+  id: number,
   email: string,
 }
 
@@ -20,3 +20,8 @@ export type Category = {
   id: number,
   name: string,
 };
+
+export interface IPayload {
+  id?: number,
+  email?: string,
+}

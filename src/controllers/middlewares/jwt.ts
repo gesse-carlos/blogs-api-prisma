@@ -3,6 +3,7 @@ import { JwtPayload } from 'jsonwebtoken';
 
 import { verify } from '../../../utils/jwt';
 import { userService } from "../../services";
+import { User } from '../../../utils/types';
 
 export const validateJWT = async (req: Request, res: Response, next: NextFunction) => {
   const { authorization } = req.headers;
@@ -13,11 +14,11 @@ export const validateJWT = async (req: Request, res: Response, next: NextFunctio
   }
 
   try {
-    const verifiedToken = verify(authorization) as JwtPayload;
+    const verifiedToken = verify(authorization) as User;
     req.user = verifiedToken;
 
-    const user = await userService.getByEmail(verifiedToken.email);
-    req.user.id = user?.id;
+    const user = await userService.getByEmail(verifiedToken.email as string);
+    req.user.id = Number(user?.id);
 
     next();
   } catch (err) {
