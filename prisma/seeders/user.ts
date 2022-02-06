@@ -1,8 +1,4 @@
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
-
-const data = [
+export const userData = [
   {
     name: 'Lewis Hamilton',
     email: 'lewishamilton@gmail.com',
@@ -15,19 +11,4 @@ const data = [
     password: '123456',
     image: 'https://sportbuzz.uol.com.br/media/_versions/gettyimages-52491565_widelg.jpg',
   }
-]
-
-async function main() {
-  await prisma.user.createMany({
-    data,
-  })
-};
-
-main()
-  .catch((e) => {
-    console.error(e);
-    process.exit(1);
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+];
