@@ -10,3 +10,8 @@ export interface IPost {
   content: string,
   authorId: number,
 }
+
+export type User = {
+  id: string,
+  email: string,
+}
