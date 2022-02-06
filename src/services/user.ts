@@ -16,7 +16,7 @@ export const add = async (userData: IUser) => {
     },
   });
 
-  const token = sign(name);
+  const token = sign(email);
 
   return token;
 };
